@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ChatModule } from './chat/chat.module';
+import { ChatWhatsappModule } from './chat-whatsapp/chat-whatsapp.module';
 
 @Module({
   imports: [
@@ -9,6 +10,7 @@ import { ChatModule } from './chat/chat.module';
       isGlobal: true, 
     }),
     ChatModule,
+    ChatWhatsappModule,
   ],
 })
 export class AppModule {}
